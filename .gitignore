@@ -1,0 +1,23 @@
+# LaTeX build output and temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+
+# Compiled outputs for specific target applications
+/applications/
+
+# Build and IDE outputs
+/out/
+.idea/caches/
+.idea/workspace.xml
+.idea/shelf/
+*.iws
+
+# Bundle file
+latex_bundle.txt
