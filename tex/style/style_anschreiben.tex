@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Language & Font Setup ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[default]{lato}                    % modern, ATS-safe sans-serif font
+\usepackage{iftex}
+\ifxetex
+  \providecommand{\textls}[2][150]{{\addfontfeature{LetterSpace=15}#2}}
+  \renewcommand{\textls}[2][150]{{\addfontfeature{LetterSpace=15}#2}}
+\else
+  \usepackage[letterspace=150]{microtype}
+\fi
+\usepackage{xcolor}
+
+% --- Design Colors ---
+\definecolor{accent}{HTML}{1F3864}      % dark navy
+\definecolor{accentlight}{HTML}{4A6FA5} % lighter blue
+\definecolor{datecolor}{HTML}{595959}   % neutral gray
+
+% --- Layout & Margins ---
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+
+% --- Paragraph & Line Spacing ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\setlength{\emergencystretch}{2em}
+\linespread{1.15}
+
+% --- ATS & Link Setup ---
+\pagestyle{empty}
+\urlstyle{same}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfborder={0 0 0}
+}

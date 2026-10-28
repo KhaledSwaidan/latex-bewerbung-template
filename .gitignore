@@ -14,9 +14,7 @@
 
 # Build and IDE outputs
 /out/
-.idea/caches/
-.idea/workspace.xml
-.idea/shelf/
+.idea/
 *.iws
 
 # Bundle file

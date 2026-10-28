@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Language & Font Setup ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[default]{lato}                    % modern, ATS-safe sans-serif
+\usepackage{iftex}
+\setlength{\emergencystretch}{3em}
+\hyphenpenalty=1000
+\ifxetex
+  \usepackage{microtype}
+  \providecommand{\textls}[2][150]{{\addfontfeature{LetterSpace=15}#2}}
+  \renewcommand{\textls}[2][150]{{\addfontfeature{LetterSpace=15}#2}}
+\else
+  \usepackage[letterspace=150]{microtype}
+\fi
+\usepackage{xcolor}
+
+% --- Design Colors ---
+\definecolor{accent}{HTML}{1F3864}      % dark navy (name, section rules, company)
+\definecolor{accentlight}{HTML}{4A6FA5} % lighter blue (role, bold labels)
+\definecolor{datecolor}{HTML}{595959}   % neutral gray (dates)
+
+% --- Layout & Margins ---
+\usepackage[left=2.1cm, right=2.1cm, top=1.7cm, bottom=1.7cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{fontspec}
+
+\linespread{1.05}
+
+% --- ATS-Friendly Formatting ---
+\pagestyle{empty}
+\urlstyle{same}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfborder={0 0 0},
+    pdfauthor={Khaled Swaidan},
+    pdftitle={Lebenslauf -- Khaled Swaidan},
+    pdfsubject={Mobile Engineer -- Flutter, iOS/Android}
+}
+
+% --- Section headings: bold small caps, navy, thin rule underneath ---
+\titleformat{\section}
+{\normalfont\large\bfseries\scshape\color{accent}}
+{}{0pt}{}
+[{\vspace{2pt}{\color{accent}\titlerule[0.6pt]}}]
+
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+% --- Bullet lists: colored bullet, more air ---
+\setlist[itemize]{
+    leftmargin=1.2em,
+    labelsep=0.7em,
+    label=\textcolor{accent}{\textbullet},
+    itemsep=3pt,
+    topsep=3pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% --- Paragraph spacing ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\raggedbottom
+
+% --- Custom commands ---
+
+% Header: name (letter-spaced navy) / role (light blue) / contact (gray) + rule
+\newcommand{\cvheader}[3]{%
+    \begin{center}
+    {\fontsize{24}{28}\selectfont\bfseries\color{accent}\textls[150]{#1}}\\[5pt]
+    {\normalsize\color{accentlight}#2}\\[7pt]
+    {\small\color{datecolor}#3}
+    \end{center}
+    \vspace{3pt}
+    {\color{accent}\rule{\linewidth}{0.9pt}}
+}
+
+% Entry: role (bold black) + date (gray, right) / company (italic navy)
+\newcommand{\entry}[3]{%
+    \vspace{6pt}%
+    \noindent\textbf{#1} \hfill {\small\color{datecolor}#2}\\[2pt]
+    {\itshape\color{accent}#3}\par
+}
+
+\newcommand{\entrysimple}[2]{%
+    \vspace{6pt}%
+    \noindent\textbf{#1} \hfill {\small\color{datecolor}#2}\par
+}
