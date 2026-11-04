@@ -9,9 +9,6 @@
 *.bbl
 *.blg
 
-# Compiled outputs for specific target applications
-/applications/
-
 # Build and IDE outputs
 /out/
 .idea/
