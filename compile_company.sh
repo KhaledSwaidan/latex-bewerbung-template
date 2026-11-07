@@ -8,16 +8,32 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TEX_DIR="$SCRIPT_DIR/tex"
 DEFAULT_PDF_DIR="$SCRIPT_DIR/pdf"
 
-# Parse arguments: company name and optional --force
+# Parse arguments: company name and flags (--force, --no-date)
 COMPANY_NAME=""
 FORCE_BUILD=false
+INCLUDE_DATE=true
 
-for arg in "$@"; do
-    if [ "$arg" = "--force" ] || [ "$arg" = "-f" ]; then
-        FORCE_BUILD=true
-    elif [ -z "$COMPANY_NAME" ]; then
-        COMPANY_NAME="$arg"
-    fi
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --force|-f)
+            FORCE_BUILD=true
+            shift
+            ;;
+        --no-date)
+            INCLUDE_DATE=false
+            shift
+            ;;
+        --help|-h)
+            echo "Usage: $0 <Company_Name> [--force] [--no-date]"
+            exit 0
+            ;;
+        *)
+            if [ -z "$COMPANY_NAME" ]; then
+                COMPANY_NAME="$1"
+            fi
+            shift
+            ;;
+    esac
 done
 
 # If no company provided and running interactively, prompt user
@@ -29,17 +45,29 @@ fi
 
 if [ -z "$COMPANY_NAME" ]; then
     echo "❌ Error: Company name is required."
-    echo "Usage: $0 <Company_Name> [--force]"
+    echo "Usage: $0 <Company_Name> [--force] [--no-date]"
     exit 1
 fi
 
-OUTPUT_DIR="$SCRIPT_DIR/applications/$COMPANY_NAME"
+DATE_SUFFIX="$(date +%d_%m_%Y)"
+
+# Determine folder name (e.g. company_07_11_2026 or company)
+if [ "$INCLUDE_DATE" = "true" ]; then
+    FOLDER_NAME="${COMPANY_NAME}_${DATE_SUFFIX}"
+else
+    FOLDER_NAME="$COMPANY_NAME"
+fi
+
+OUTPUT_DIR="$SCRIPT_DIR/applications/$FOLDER_NAME"
 mkdir -p "$OUTPUT_DIR"
 
 echo "=========================================="
 echo "    Compiling LaTeX Documents (Company)   "
 echo "=========================================="
 echo "🏢 Target Company: $COMPANY_NAME"
+if [ "$INCLUDE_DATE" = "true" ]; then
+    echo "📅 Date Suffix:    $DATE_SUFFIX"
+fi
 echo "📁 Output Folder:  $OUTPUT_DIR"
 echo "=========================================="
 
@@ -98,7 +126,7 @@ compile_doc() {
     fi
 
     if ! needs_compile "$src_path" "$target_path"; then
-        echo "⏭️  $pdf_file is up to date for $COMPANY_NAME. Skipping compilation."
+        echo "⏭️  $pdf_file is up to date for $FOLDER_NAME. Skipping compilation."
         return 0
     fi
 

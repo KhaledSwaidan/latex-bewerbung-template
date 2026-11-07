@@ -1,53 +1,231 @@
+
 \input{style/style_lebenslauf}
 
 \begin{document}
 
-    \cvheader
-    {Khaled Swaidan}
-    {AI \& Data Engineer -- Python, RAG \& Cloud | M.Sc. Informatik}
-    {Schwachhausen, 28211 Bremen \textbullet\ \href{mailto:khaled.swaidan.k@gmail.com}{khaled.swaidan.k@gmail.com} \textbullet\ Verfügbar ab sofort}
+% ==================================================
+% KOPF
+% ==================================================
 
-    \section{Profil}
-    AI- und Data-Engineer (M.Sc. Informatik, Thesis 1,0) mit Fokus auf die Entwicklung datengetriebener Lösungen und produktionsreifer KI-Systeme. Ich verbinde technische Expertise in Python, ETL-Pipelines und Cloud-Architekturen (Azure) mit der Fähigkeit, komplexe Anforderungen von Stakeholdern zu verstehen und in funktionierende Lösungen zu übersetzen. Durch meine Beratungserfahrung bin ich es gewohnt, analytische Ergebnisse für Entscheidungsträger nachvollziehbar aufzubereiten.
+    {\fontsize{23}{27}\selectfont
+    \bfseries\color{navy}Khaled Swaidan}
+\par
 
-    \section{Berufserfahrung}
+\vspace{1pt}
 
-    \entry{Softwareentwickler (Cloud \& Automation)}{02/2025--04/2026}{Rocket-Code}
-    \begin{itemize}
-        \item \textcolor{accentlight}{\textbf{Cloud \& Data Integration:}} Anbindung von Enterprise-Anwendungen an Azure Functions und Azure Storage; Sicherstellung stabiler Datenflüsse und API-Integrationen.
-        \item \textcolor{accentlight}{\textbf{DevOps \& Qualität:}} Implementierung von CI/CD-nahen Testroutinen und Git Hooks zur Automatisierung von Code-Reviews.
-        \item \textcolor{accentlight}{\textbf{AI-Driven Development:}} Täglicher Einsatz von LLMs (ChatGPT, Claude) zur Code-Optimierung und Effizienzsteigerung.
-    \end{itemize}
+{\color{muted}\large
+Softwareentwickler | Webanwendungen,
+    APIs \& Produktentwicklung}
+\par
 
-    \entry{Junior IT-Berater -- Requirements \& Evaluation}{11/2023--07/2024}{IFIB Consult}
-    \begin{itemize}
-        \item \textcolor{accentlight}{\textbf{Kundenkontakt \& Beratung:}} Analyse von Geschäftsanforderungen und Übersetzung in technische Spezifikationen für komplexe IT-Systeme.
-        \item \textcolor{accentlight}{\textbf{Prozessstrukturierung:}} Schärfung unklarer Problemstellungen und direkte Abstimmung mit Stakeholdern auf operativer Ebene.
-        \item \textcolor{accentlight}{\textbf{Evaluation \& Testing:}} Externe Evaluationsstelle für Softwareprojekte; Qualitätssicherung und Dokumentation.
-    \end{itemize}
+\vspace{4pt}
 
-    \section{Projekte \& AI-Data-Engineering}
+{\small
+Bremen (Schwachhausen)
+    \quad\textbullet\quad
+    \href{mailto:khaled.swaidan.k@gmail.com}
+    {khaled.swaidan.k@gmail.com}
+}
+\par
 
-    \entry{SIRcraft AI Platform -- Masterarbeit}{10/2025--09/2026}{Universität Bremen | Note 1,0}
-    \begin{itemize}
-        \item \textcolor{accentlight}{\textbf{ETL \& Data Pipelines:}} Aufbau einer End-to-End Ingestion-Pipeline (LangChain) zur Verarbeitung unstrukturierter Daten; semantisches Chunking und Generierung von Embeddings.
-        \item \textcolor{accentlight}{\textbf{Vektor-Datenbanken \& RAG:}} Speicherung der Daten in ChromaDB und Implementierung von Retrieval-Strategien für LLM-Anwendungen.
-        \item \textcolor{accentlight}{\textbf{Evaluation \& Agenten:}} Benchmarking von vier LLMs und Entwicklung von Guardrails (AST-Parser) für sichere Agenten-Workflows.
-    \end{itemize}
 
-    \section{Bildung}
+% ==================================================
+% PROFIL
+% ==================================================
 
-    \entry{M.Sc. Informatik}{10/2023--09/2026}{Universität Bremen | Gesamtnote 1,8; Masterarbeit 1,0}
-    \entry{B.Sc. Informatik}{10/2018--09/2023}{Universität Bremen}
+\section{Profil}
 
-    \section{Fachliche Kenntnisse}
-    \begin{itemize}
-        \item \textcolor{accentlight}{\textbf{Data \& AI:}} Python, SQL, ETL-Pipelines, Datenmodellierung, RAG-Architekturen, Vektor-Datenbanken (ChromaDB), LangChain, LLM-APIs (OpenAI, Gemini).
-        \item \textcolor{accentlight}{\textbf{Cloud \& DevOps:}} Azure (Functions, Storage), Docker, CI/CD, Git, Terraform (Grundlagen), Linux.
-        \item \textcolor{accentlight}{\textbf{Consulting \& Methodik:}} Requirements Engineering, Stakeholder-Kommunikation, Agile (Scrum), Datenvisualisierung (Grundlagen Tableau/Power BI).
-    \end{itemize}
+Softwareentwickler (M.Sc. Informatik) mit Erfahrung
+in der Aufnahme fachlicher Anforderungen, der
+Umsetzung nutzerorientierter Funktionen,
+API-Integration und Softwaretests.
+Bei Rocket-Code entwickelte ich Kunden- und
+Dokumentenworkflows; bei IFIB Consult führte ich
+Funktions- und Usability-Tests durch.
+Mein Eigenprojekt TaminyPro umfasst Shop-,
+Menü- und Bestellfunktionen.
+Interesse an der technischen Produktentwicklung
+an der Schnittstelle von Fachbereichen,
+Entwicklung und Qualitätssicherung.
 
-    \section{Sprachen}
-    Deutsch (C1) \quad Englisch (C1) \quad Arabisch (Muttersprache)
+
+% ==================================================
+% BERUFSERFAHRUNG
+% ==================================================
+
+\section{Berufserfahrung}
+
+\cvitem
+{Softwareentwickler | Flutter \& API-Integration}
+{02/2025--04/2026}
+{Rocket-Code}
+
+\begin{itemize}
+
+    \item Anforderungen mit Anwendern abgestimmt,
+    interaktive Prototypen erstellt und
+    einen geführten Kundenkontakt-Workflow
+    mit Folgeaktionen für E-Mail, SMS
+    und WhatsApp umgesetzt.
+
+    \item Dokumenten- und Signaturabläufe
+    weiterentwickelt; vorhandene Azure Functions
+    und Azure Blob Storage in die Anwendung
+    integriert und API-Fehlerfälle behandelt.
+
+    \item GoRouter-Navigation refaktoriert
+    und eine responsive Dialogkomponente
+    an rund 50 Stellen eingeführt;
+    dynamische PDF-Vorlagen angepasst.
+
+    \item Usability-Tests und Code-Reviews
+    durchgeführt sowie automatisierte
+    Flutter-Tests über einen
+    Git-Pre-Commit-Hook eingebunden.
+
+\end{itemize}
+
+
+\cvitem
+{Junior IT-Berater | Testing \& Evaluation}
+{11/2023--07/2024}
+{IFIB Consult}
+
+\begin{itemize}
+
+    \item Funktions- und Usability-Tests
+    einer Bildungsplattform und der Walter App
+    durchgeführt; detaillierte Testprotokolle
+    erstellt und ausgewertet.
+
+    \item Digitalisierungsstrategien
+    und Anforderungen recherchiert, analysiert
+    und Projektergebnisse visuell aufbereitet.
+
+\end{itemize}
+
+
+% ==================================================
+% AUSGEWÄHLTE PROJEKTE
+% ==================================================
+
+\section{Ausgewählte Projekte}
+
+% --------------------------------------------------
+% TAMINYPRO
+% --------------------------------------------------
+
+\cvitem
+{TaminyPro | Shop- und Bestellverwaltung}
+{laufend}
+{Eigenprojekt | Flutter/Dart, Firebase, Firestore}
+
+\begin{itemize}
+
+    \item Entwicklung einer modularen
+    Gastronomieanwendung mit Shop-Verwaltung,
+    öffentlicher Menü-/Bestellansicht,
+    Benutzerrollen und Realtime-Bestellungen.
+
+\end{itemize}
+
+
+% --------------------------------------------------
+% BACHELORPROJEKT
+% --------------------------------------------------
+
+\cvitem
+{Java-Webanwendung | Bachelorprojekt}
+{im Bachelorstudium}
+{Universität Bremen}
+
+\begin{itemize}
+
+    \item Mitentwicklung einer datenbankgestützten
+    Webanwendung mit Java/Jakarta EE im Backend,
+    PrimeFaces im Frontend und MariaDB.
+
+\end{itemize}
+
+
+% --------------------------------------------------
+% MASTERARBEIT
+% --------------------------------------------------
+
+\cvitem
+{SIRcraft AI | Webbasierter KI-Assistent}
+{2026}
+{Masterarbeit | Universität Bremen | Note 1,0}
+
+\begin{itemize}
+
+    \item Entwicklung einer Webanwendung
+    mit Flutter, Python/FastAPI
+    und REST-Schnittstellen;
+    Zwei-Server-Betrieb, Tests
+    und technische Integration.
+
+\end{itemize}
+
+% Sichtbarer Projektlink
+    {\small
+\href{https://sircraft.uni-bremen.de/sircraft-ai/}
+{\nolinkurl{https://sircraft.uni-bremen.de/sircraft-ai/}}
+}
+\par
+
+
+% ==================================================
+% AUSBILDUNG
+% ==================================================
+
+\section{Ausbildung}
+
+\cvitem
+{M.Sc. Informatik}
+{2026}
+{Universität Bremen | Gesamtnote 1,8;
+Masterarbeit 1,0}
+
+\cvitem
+{B.Sc. Informatik}
+{2024}
+{Universität Bremen}
+
+
+% ==================================================
+% TECHNISCHE KENNTNISSE
+% ==================================================
+
+\section{Technische Kenntnisse}
+
+\begingroup
+
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{tabularx}{\linewidth}{@{}p{30mm}X@{}}
+
+\textcolor{navy}{Software} &
+Flutter/Dart, Python/FastAPI,
+Java/Jakarta EE, PrimeFaces, Git \\
+
+\textcolor{navy}{APIs / Daten} &
+REST, Firebase Authentication,
+Cloud Firestore, MariaDB,
+Azure-Dienstanbindung \\
+
+\textcolor{navy}{Anforderungen / QA} &
+Prototyping, UI/UX,
+Funktions- und Usability-Tests,
+automatisierte Tests, Code-Reviews \\
+
+\textcolor{navy}{Sprachen} &
+Deutsch, Englisch,
+Arabisch (Muttersprache) \\
+
+\end{tabularx}
+
+\endgroup
 
 \end{document}

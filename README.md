@@ -17,6 +17,7 @@ A clean, modern LaTeX template for job application documents (Lebenslauf / CV an
 ├── applications/              # Company-specific outputs (ignored in git)
 ├── compile.sh                 # Test compilation script
 ├── compile_company.sh         # Company application compilation script
+├── compile_jobcenter.sh       # Jobcenter application compilation script (applications/jobcenter/jb_*)
 └── bundle.sh                  # Bundle script for AI prompt context
 ```
 
@@ -37,10 +38,23 @@ When your documents are ready and you want to generate documents for a specific 
 ./compile_company.sh "CompanyName"
 ```
 This generates:
-- `applications/CompanyName/lebenslauf.pdf`
-- `applications/CompanyName/anschreiben.pdf`
+- `applications/CompanyName_07_11_2026/lebenslauf.pdf`
+- `applications/CompanyName_07_11_2026/anschreiben.pdf`
 
-### 3. Context Bundling (Optional)
+*(To omit the date suffix, pass `--no-date`)*
+
+### 3. Jobcenter Application Compilation
+For Jobcenter-related applications, use `compile_jobcenter.sh`. This automatically organizes them into the `applications/jobcenter/` subfolder with the `jb_` prefix and today's date:
+```bash
+./compile_jobcenter.sh "CompanyName"
+```
+This generates:
+- `applications/jobcenter/jb_CompanyName_07_11_2026/lebenslauf.pdf`
+- `applications/jobcenter/jb_CompanyName_07_11_2026/anschreiben.pdf`
+
+*(To omit the date suffix, pass `--no-date`)*
+
+### 4. Context Bundling (Optional)
 To bundle all `.tex` files into a single text file for AI prompt context:
 ```bash
 ./bundle.sh
