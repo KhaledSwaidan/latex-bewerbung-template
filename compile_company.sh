@@ -58,7 +58,7 @@ else
     FOLDER_NAME="$COMPANY_NAME"
 fi
 
-OUTPUT_DIR="$SCRIPT_DIR/applications/$FOLDER_NAME"
+OUTPUT_DIR="$SCRIPT_DIR/applications/main/$FOLDER_NAME"
 mkdir -p "$OUTPUT_DIR"
 
 echo "=========================================="

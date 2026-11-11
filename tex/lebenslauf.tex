@@ -14,8 +14,8 @@
 \vspace{1pt}
 
 {\color{muted}\large
-Softwareentwickler | Python, RAG
-\& GenAI Engineering}
+Softwareentwickler | Generative AI, RAG
+\& Python}
 \par
 
 \vspace{4pt}
@@ -25,6 +25,8 @@ Bremen (Schwachhausen)
     \quad\textbullet\quad
     \href{mailto:khaled.swaidan.k@gmail.com}
     {khaled.swaidan.k@gmail.com}
+    \quad\textbullet\quad
+    Staatsangehörigkeit: deutsch
 }
 \par
 
@@ -35,57 +37,51 @@ Bremen (Schwachhausen)
 \section{Profil}
 
 Softwareentwickler (M.Sc. Informatik) mit Schwerpunkt
-auf Python-basierten KI-Anwendungen,
-Retrieval-Augmented Generation und LLM-Integration.
-Eigenständig einen lokalen RAG-Assistenten von
-Wissensaufbereitung und API-Anbindung über
-Evaluation und automatisierte Tests bis zum
-Zwei-Server-Betrieb umgesetzt. Berufliche
-Erfahrung mit REST-Schnittstellen,
-Dokumentenabläufen und Softwarequalität.
+auf Generative AI, RAG und Python-basierten
+Assistenzsystemen. Eigenständige Entwicklung eines
+KI-Assistenten mit semantischer Suche, lokaler
+LLM-Inferenz, Prompt-Orchestrierung, Validierung
+generierter Antworten und systematischer Evaluation.
+Berufserfahrung in API-Integration, Anforderungsanalyse,
+Softwarequalität und nutzerorientierter Entwicklung.
 
 % ==================================================
-% KI-PROJEKT | MASTERARBEIT
+% KI-PROJEKT
 % ==================================================
 
 \section{KI-Projekt | Masterarbeit}
 
 \cvitem
-{SIRcraft AI | Dokumentationsgestützter KI-Assistent}
+{SIRcraft AI | RAG-basierter KI-Assistent}
 {2026}
 {Universität Bremen | Masterarbeit: 1,0}
 
 \begin{itemize}
 
-    \item KI-Assistenten für eine epidemiologische
-    No-Code-Anwendung entwickelt:
-    Python/FastAPI, Pydantic, Flutter Web;
-    Wissensbasis mit 179 kuratierten
-    Dokumentationsabschnitten und semantischem
-    Retrieval über ChromaDB.
+    \item Einen webbasierten KI-Assistenten mit
+    Python/FastAPI, Flutter Web,
+    ChromaDB und Ollama
+    konzipiert und implementiert;
+    179 kuratierte Dokumentationsabschnitte
+    für semantisches Retrieval aufbereitet.
 
-    \item Eigene Embedding- und RAG-Services
-    implementiert: \texttt{nomic-embed-text}
-    über Ollama/HTTPX, dokument- und
-    anfragespezifische Präfixe,
-    Kontextaufbereitung sowie strukturierte
-    Prompts mit Gesprächshistorie und
-    Few-Shot-Beispielen.
+    \item Eine modulare RAG-Pipeline
+    mit eigener Ollama-Embedding-Anbindung,
+    Vektorsuche und Python-basierter
+    Prompt-Orchestrierung entwickelt;
+    Fachkontext und Gesprächshistorie
+    in die LLM-Anfragen integriert.
 
-    \item Vier lokal gehostete LLMs über
-    Ollama angebunden; JSON-Ausgaben
-    bereinigt und fehlerhafte Antworten
-    behandelt; generierte Modellgleichungen
-    mit eigenem rekursiven Syntaxparser
-    überprüft.
+    \item Strukturierte JSON-Ausgaben,
+    mehrstufige Antwortbereinigung und einen
+    eigenständigen Syntaxparser zur Validierung
+    generierter Modellgleichungen umgesetzt.
 
-    \item Vier Modelle anhand von 30 Fragen
-    systematisch evaluiert; 67 Backend-
-    und 30 Frontend-Tests.
-    Zwei-Server-Architektur mit Docker Compose,
-    Nginx und HTTP-Kommunikation eingerichtet;
-    Web-App für universitäre Beta-Tests
-    bereitgestellt.
+    \item Vier lokale LLMs
+    anhand von 30 Testfragen evaluiert;
+    67 Backend- und 30 Frontend-Tests
+    sowie Deployment auf zwei Servern
+    mit Docker Compose und Nginx.
 
 \end{itemize}
 
@@ -102,45 +98,64 @@ Dokumentenabläufen und Softwarequalität.
 \section{Berufserfahrung}
 
 \cvitem
-{Softwareentwickler | API-Integration und Dokumentenprozesse}
+{Softwareentwickler | Flutter \& Systemintegration}
 {02/2025--04/2026}
 {Rocket-Code}
 
 \begin{itemize}
 
-    \item Plattformübergreifende
-    Flutter/Dart-Vertriebsanwendung mit
-    BLoC/Cubit, Repository-Schicht,
-    REST-APIs und lokalen Isar-Daten
-    weiterentwickelt; Online-Fallbacks
-    und Fehlerfälle berücksichtigt.
+    \item Anforderungen mit Anwendern abgestimmt,
+    UI-Prototypen erstellt und einen
+    dialoggestützten Vertriebsassistenten
+    mit situationsabhängigen Folgeaktionen
+    für Kundenkontakte umgesetzt.
 
-    \item Geführten Kundenkontaktprozess
-    sowie Dokumenten- und Signaturabläufe
-    umgesetzt; bestehende Azure Functions
-    und Azure Blob Storage integriert,
-    dynamische PDF-Vorlagen bearbeitet.
+    \item Einen Dokumenten- und Signaturworkflow
+    mit mehreren Signaturvarianten implementiert;
+    vorhandene Azure Functions
+    angebunden, Fehlerfälle behandelt und
+    signierte Dokumente über Azure Blob Storage
+    in die App integriert.
 
-    \item Anforderungen mit Anwendern abgestimmt;
-    UI-Prototypen, Code-Reviews, Tests und
-    Git-Hooks eingesetzt; deutsch- und
-    englischsprachige Anleitungen
-    und FAQs erstellt.
+    \item REST-Schnittstellen sowie
+    BLoC/Cubit, Repository Pattern
+    und Local-first-Datenzugriff mit
+    Isar in einer plattformübergreifenden
+    Flutter-Anwendung eingesetzt.
+
+    \item Wiederverwendbare responsive
+    Dialog-Komponente entwickelt und an
+    rund 50 Stellen eingesetzt;
+    Navigation refaktoriert und
+    kundenspezifische PDF-Vorlagen mit
+    dynamischen Angebotsdaten angepasst.
+
+    \item Usability-Tests, Pull-Request-Reviews
+    und automatisierte Flutter-Tests
+    durchgeführt; Git-Pre-Commit-Hooks
+    für Qualitätsprüfungen eingerichtet
+    und zweisprachige Helpdesk-Inhalte erstellt.
 
 \end{itemize}
 
 \cvitem
-{Junior IT-Berater | Testing und Evaluation}
+{Junior IT-Berater | Evaluation \& Anforderungen}
 {11/2023--07/2024}
 {IFIB Consult}
 
 \begin{itemize}
 
-    \item Funktions- und Usability-Tests
-    digitaler Anwendungen durchgeführt,
-    Ergebnisse dokumentiert und ausgewertet
-    sowie Digitalisierungsanforderungen
-    recherchiert.
+    \item Funktions- und Usability-Tests einer
+    Bildungsplattform durchgeführt,
+    detaillierte Testprotokolle erstellt
+    sowie Ergebnisse dokumentiert
+    und ausgewertet.
+
+    \item Digitalisierungsstrategien und
+    fachliche Anforderungen recherchiert,
+    Informationen aktualisiert und
+    Projektergebnisse durch eigene
+    Visualisierungen aufbereitet.
 
 \end{itemize}
 
@@ -151,19 +166,23 @@ Dokumentenabläufen und Softwarequalität.
 \section{Eigenprojekt}
 
 \cvitem
-{TaminyPro | Modulare Shop- und Bestellplattform}
+{TaminyPro | Digitale Shop- und Bestellplattform}
 {laufend}
-{Flutter/Dart, Firebase Authentication,
-    Cloud Firestore}
+{Flutter/Dart, Firebase Authentication, Firestore}
 
 \begin{itemize}
 
-    \item Mandantenfähige Plattform mit
-    Rollenrechten und Echtzeitbestellungen;
-    Claude, Copilot und weitere Coding-Agenten
-    zur Entwicklung, Fehlersuche,
-    Testgenerierung und KI-Code-Reviews
-    eingesetzt; Ergebnisse selbst geprüft.
+    \item Mandantenbezogene Shop-, Menü- und
+    Bestellprozesse mit rollenbasierter
+    Benutzerverwaltung, Zugriffsprüfungen
+    und Echtzeit-Bestellübersichten entwickelt.
+
+    \item Modulare Architektur mit
+    BLoC/Cubit, Repository Pattern,
+    Dependency Injection und asynchroner
+    Datenverarbeitung aufgebaut;
+    laufende Weiterentwicklung mit
+    KI-gestützten Code-Reviews und Tests.
 
 \end{itemize}
 
@@ -195,26 +214,30 @@ Masterarbeit 1,0}
 \setlength{\tabcolsep}{0pt}
 \renewcommand{\arraystretch}{1.12}
 
-\begin{tabularx}{\linewidth}{@{}p{29mm}X@{}}
+\begin{tabularx}{\linewidth}{@{}p{30mm}X@{}}
 
-\textcolor{navy}{GenAI / RAG} &
-Ollama, ChromaDB, Embeddings,
-Prompt Engineering, LLM-Evaluation,
-strukturierte Ausgaben, Syntaxvalidierung \\
+\textcolor{navy}{Generative AI} &
+RAG, LLMs, Embeddings, ChromaDB,
+Ollama, Prompt Engineering,
+LLM-Evaluation, strukturierte Ausgaben \\
 
 \textcolor{navy}{Backend / APIs} &
-Python, FastAPI, Pydantic, HTTPX,
-REST, Java/Jakarta EE (Bachelorprojekt) \\
+Python, FastAPI, Pydantic,
+HTTPX, REST, JSON, SQL (Grundlagen) \\
 
 \textcolor{navy}{Frontend / Daten} &
 Flutter/Dart, BLoC/Cubit,
-Firebase, Firestore, Isar \\
+Firebase Authentication, Firestore,
+Isar, Repository Pattern \\
 
-\textcolor{navy}{Betrieb / Qualität} &
+\textcolor{navy}{DevOps / Qualität} &
 Docker Compose, Nginx, Git,
-GitHub Actions, pytest,
-Flutter-Tests, Git-Hooks,
-Azure-Dienstanbindung \\
+pytest, Flutter-Tests,
+Code-Reviews, Pre-Commit-Hooks \\
+
+\textcolor{navy}{Methoden} &
+Anforderungsanalyse, UI-Prototyping,
+Usability-Tests, technische Dokumentation \\
 
 \textcolor{navy}{Sprachen} &
 Deutsch, Englisch,

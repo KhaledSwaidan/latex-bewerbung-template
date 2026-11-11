@@ -38,8 +38,8 @@ When your documents are ready and you want to generate documents for a specific 
 ./compile_company.sh "CompanyName"
 ```
 This generates:
-- `applications/CompanyName_07_11_2026/lebenslauf.pdf`
-- `applications/CompanyName_07_11_2026/anschreiben.pdf`
+- `applications/main/CompanyName_11_11_2026/lebenslauf.pdf`
+- `applications/main/CompanyName_11_11_2026/anschreiben.pdf`
 
 *(To omit the date suffix, pass `--no-date`)*
 
